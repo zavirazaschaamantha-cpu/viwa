@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-brand-50: #f8fafc;
+  --color-brand-100: #f1f5f9;
+  --color-brand-200: #e2e8f0;
+  --color-brand-300: #cbd5e1;
+  --color-brand-400: #94a3b8;
+  --color-brand-500: #64748b;
+  --color-brand-600: #475569;
+  --color-brand-700: #334155;
+  --color-brand-800: #1e293b;
+  --color-brand-900: #0f172a;
+  --color-brand-950: #020617;
+
+  /* Frosted Glass Theme Colors */
+  --color-glass-bg: rgba(255, 255, 255, 0.05);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-glass-highlight: rgba(255, 255, 255, 0.15);
+}
+
+@layer base {
+  body {
+    @apply text-slate-100 bg-slate-950 antialiased selection:bg-blue-500/30;
+  }
+}
+
+.glass-card {
+  @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl;
+}
+
+.glass-nav {
+  @apply backdrop-blur-md bg-slate-900/50 border-b border-white/10;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-white to-slate-400;
+}
+
+.glow-blue {
+  @apply absolute rounded-full mix-blend-multiply filter blur-3xl opacity-20 bg-blue-600;
+}
+
+.glow-indigo {
+  @apply absolute rounded-full mix-blend-multiply filter blur-3xl opacity-20 bg-indigo-500;
+}
+
+.glow-cyan {
+  @apply absolute rounded-full mix-blend-multiply filter blur-3xl opacity-10 bg-cyan-500;
+}

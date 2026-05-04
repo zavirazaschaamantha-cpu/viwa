@@ -1,0 +1,132 @@
+import { motion } from 'motion/react';
+import { AlertCircle, CheckCircle2, FileText, Clock, BarChart3, Layers } from 'lucide-react';
+
+export default function ProblemSolution() {
+  const problems = [
+    { icon: <FileText className="text-red-400" />, title: "Manual Data Errors", desc: "Mistakes in participant lists and certificates from manual data entry." },
+    { icon: <Clock className="text-red-400" />, title: "Slow Attendance", desc: "Long queues and bottlenecks during on-site event check-ins." },
+    { icon: <Layers className="text-red-400" />, title: "Non Real-time Data", desc: "Coordinators lack instant insights into registration numbers." },
+    { icon: <BarChart3 className="text-red-400" />, title: "Messy Reporting", desc: "Hours spent compiling reports from scattered spreadsheets." },
+  ];
+
+  const solutions = [
+    { title: "Online Registration", desc: "Branded, custom forms that capture data accurately from the start." },
+    { title: "QR Ticketing", desc: "Instant digital tickets sent to participants for lightning-fast scan-in." },
+    { title: "Real-time Dashboard", desc: "Monitor registrations and attendance as they happen." },
+    { title: "Easy Reporting", desc: "Download professional event reports with a single click." },
+  ];
+
+  return (
+    <section className="py-20 bg-slate-950 overflow-hidden">
+      <div className="container mx-auto px-6">
+        {/* Problem Section */}
+        <div className="flex flex-col lg:flex-row items-center gap-16 mb-32">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="flex-1 order-2 lg:order-1"
+          >
+            <div className="flex items-center gap-2 text-red-500 font-bold mb-4 uppercase tracking-widest text-xs">
+              <AlertCircle size={18} /> The Friction
+            </div>
+            <h2 className="text-4xl font-display font-bold text-white mb-8 leading-tight">
+              Manual processes are <span className="text-red-500">bottlenecking</span> your growth.
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {problems.map((p, i) => (
+                <div key={i} className="flex gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center">
+                    {p.icon}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-100 mb-1 text-sm">{p.title}</h4>
+                    <p className="text-[11px] text-slate-400">{p.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="flex-1 order-1 lg:order-2"
+          >
+            <div className="relative rounded-[40px] overflow-hidden glass-card p-2">
+              <div className="rounded-[32px] overflow-hidden relative">
+                <img 
+                  src="https://picsum.photos/seed/paperwork/800/600" 
+                  alt="Messy paperwork illustration" 
+                  className="w-full opacity-60"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-slate-950/20" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <div className="bg-red-500/90 text-white p-3 rounded-full shadow-2xl">
+                    <AlertCircle size={40} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Solution Section */}
+        <div className="flex flex-col lg:flex-row items-center gap-16">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="flex-1"
+          >
+            <div className="relative rounded-[40px] overflow-hidden glass-card p-2">
+              <div className="rounded-[32px] overflow-hidden relative bg-blue-600/20">
+                <img 
+                  src="https://picsum.photos/seed/qr-code/800/600" 
+                  alt="QR Scanning digital solution" 
+                  className="w-full opacity-40 mix-blend-overlay"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 flex items-center justify-center p-8">
+                   <div className="bg-slate-900/80 backdrop-blur-xl p-8 rounded-3xl shadow-2xl flex flex-col items-center gap-4 border border-white/10">
+                      <div className="w-24 h-24 bg-blue-600/20 rounded-2xl border-2 border-blue-500 flex items-center justify-center">
+                         <BarChart3 className="text-blue-400 w-12 h-12" />
+                      </div>
+                      <span className="font-bold text-white tracking-widest text-sm uppercase">Optimized Workflow</span>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="flex-1"
+          >
+            <div className="flex items-center gap-2 text-blue-400 font-bold mb-4 uppercase tracking-widest text-xs">
+              <CheckCircle2 size={18} /> Digital Efficiency
+            </div>
+            <h2 className="text-4xl font-display font-bold text-white mb-8 leading-tight">
+               Built for <span className="text-blue-400">future-proof</span> institutions.
+            </h2>
+            <div className="space-y-4">
+              {solutions.map((s, i) => (
+                <div key={i} className="flex gap-4 p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-colors">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400">
+                    <CheckCircle2 size={18} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white mb-1">{s.title}</h4>
+                    <p className="text-sm text-slate-400 leading-relaxed">{s.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
