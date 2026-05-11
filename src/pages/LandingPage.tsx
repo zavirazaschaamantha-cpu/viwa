@@ -6,7 +6,10 @@ import Features from '../components/Features';
 import TargetMarket from '../components/TargetMarket';
 import HowItWorks from '../components/HowItWorks';
 import DashboardDemo from '../components/DashboardDemo';
+import EventsPreview from '../components/EventsPreview';
 import Testimonials from '../components/Testimonials';
+import SWOT from '../components/SWOT';
+import About from '../components/About';
 import Pricing from '../components/Pricing';
 import FAQ from '../components/FAQ';
 import CTA from '../components/CTA';
@@ -29,7 +32,10 @@ export default function LandingPage() {
         <TargetMarket />
         <HowItWorks />
         <DashboardDemo />
+        <EventsPreview />
         <Testimonials />
+        <SWOT />
+        <About />
         <Pricing />
         <FAQ />
         <CTA />
