@@ -17,34 +17,34 @@ export default function Hero() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-600 text-xs font-bold uppercase tracking-widest mb-6">
               <span className="w-2 h-2 rounded-full bg-accent-400 animate-pulse" />
-              University & Community Hub
+              Hub Universitas & Komunitas
             </div>
             <h1 className="text-5xl lg:text-7xl font-display font-bold text-slate-900 leading-[1.1] mb-6">
-              Plan <span className="text-gradient">Smarter</span>, <br />
-              Manage Events Better
+              Rencana <span className="text-gradient">Lebih Cerdas</span>, <br />
+              Kelola Acara Lebih Baik
             </h1>
             <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto lg:mx-0">
-              The all-in-one platform for university students and institutions to coordinate, 
-              promote, and analyze campus events without the manual mess.
+              Platform all-in-one untuk mahasiswa dan institusi guna mengoordinasikan, 
+              mempromosikan, dan menganalisis acara kampus tanpa kerumitan manual.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <button className="w-full sm:w-auto px-8 py-4 bg-brand-700 text-white font-bold rounded-xl hover:bg-brand-800 transition-all hover:scale-105 shadow-xl shadow-brand-200 flex items-center justify-center gap-2">
-                Get Started Free <ArrowRight size={20} />
+                Mulai Gratis <ArrowRight size={20} />
               </button>
               <button className="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 font-bold rounded-xl border border-brand-100 hover:bg-brand-50 transition-all flex items-center justify-center gap-2">
-                Watch Demo
+                Lihat Demo
               </button>
             </div>
 
             <div className="mt-12 grid grid-cols-2 gap-4 max-w-sm mx-auto lg:mx-0">
               <div className="p-4 rounded-2xl bg-white border border-brand-100 text-left shadow-sm">
                 <div className="text-brand-600 font-bold text-2xl">98%</div>
-                <div className="text-xs text-slate-500 uppercase font-bold tracking-tighter">Efficiency Boost</div>
+                <div className="text-xs text-slate-500 uppercase font-bold tracking-tighter">Peningkatan Efisiensi</div>
               </div>
               <div className="p-4 rounded-2xl bg-white border border-brand-100 text-left shadow-sm">
                 <div className="text-accent-500 font-bold text-2xl">15k+</div>
-                <div className="text-xs text-slate-500 uppercase font-bold tracking-tighter">Events Hosted</div>
+                <div className="text-xs text-slate-500 uppercase font-bold tracking-tighter">Acara Diselenggarakan</div>
               </div>
             </div>
           </motion.div>
@@ -79,7 +79,7 @@ export default function Hero() {
                 </div>
                 <div>
                   <div className="text-xs text-slate-500 font-bold uppercase tracking-tighter">Attendance</div>
-                  <div className="text-sm font-bold text-slate-900">Target Reached</div>
+                  <div className="text-sm font-bold text-slate-900">Target Tercapai</div>
                 </div>
               </div>
             </motion.div>

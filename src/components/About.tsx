@@ -26,22 +26,22 @@ export default function About() {
              viewport={{ once: true }}
              className="flex-1"
            >
-              <h2 className="text-4xl font-display font-bold text-slate-900 mb-8">Empowering Campus Connections</h2>
+              <h2 className="text-4xl font-display font-bold text-slate-900 mb-8">Memberdayakan Koneksi Kampus</h2>
               <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
                  <p>
-                    SmartEvent Planner was born out of a simple observation: student organizations have incredible energy but are often hindered by outdated manual processes.
+                    SmartEvent Planner lahir dari pengamatan sederhana: organisasi mahasiswa memiliki energi luar biasa tetapi sering terhambat oleh proses manual yang ketinggalan zaman.
                  </p>
                  <p>
-                    Our mission is to provide university communities with professional-grade tools that are easy to use, accessible, and affordable. We believe that better organized events lead to stronger communities and more impactful student experiences.
+                    Misi kami adalah menyediakan komunitas universitas dengan alat kelas profesional yang mudah digunakan, dapat diakses, dan terjangkau. Kami percaya bahwa acara yang terorganisir dengan lebih baik akan mengarah pada komunitas yang lebih kuat dan pengalaman mahasiswa yang lebih berdampak.
                  </p>
                  <div className="pt-8 flex gap-12">
                     <div>
                        <div className="text-4xl font-bold text-brand-600">5k+</div>
-                       <div className="text-sm text-slate-500 uppercase tracking-widest font-bold">Events Organized</div>
+                       <div className="text-sm text-slate-500 uppercase tracking-widest font-bold">Acara Terorganisir</div>
                     </div>
                     <div>
                        <div className="text-4xl font-bold text-accent-500">100k+</div>
-                       <div className="text-sm text-slate-500 uppercase tracking-widest font-bold">Tickets Scanned</div>
+                       <div className="text-sm text-slate-500 uppercase tracking-widest font-bold">Tiket Terpindai</div>
                     </div>
                  </div>
               </div>

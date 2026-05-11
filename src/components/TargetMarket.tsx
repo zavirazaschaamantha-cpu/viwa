@@ -3,9 +3,9 @@ import { GraduationCap, Users, Building2 } from 'lucide-react';
 
 export default function TargetMarket() {
   const targets = [
-    { icon: <GraduationCap size={40} className="text-brand-600" />, title: "Students & Universities", desc: "Manage campus-wide student organizations and departmental events with one unified account." },
-    { icon: <Users size={40} className="text-brand-600" />, title: "Communities", desc: "Scale your reach and volunteer coordination within interest groups or public communities." },
-    { icon: <Building2 size={40} className="text-brand-600" />, title: "Companies", desc: "Professional corporate training, seminars, and networking event management simplified." },
+    { icon: <GraduationCap size={40} className="text-brand-600" />, title: "Mahasiswa & Universitas", desc: "Kelola organisasi mahasiswa di seluruh kampus dan acara departemen dengan satu akun terpadu." },
+    { icon: <Users size={40} className="text-brand-600" />, title: "Komunitas", desc: "Tingkatkan jangkauan dan koordinasi sukarelawan Anda dalam kelompok minat atau komunitas publik." },
+    { icon: <Building2 size={40} className="text-brand-600" />, title: "Perusahaan", desc: "Pelatihan korporat profesional, seminar, dan manajemen acara jejaring menjadi lebih mudah." },
   ];
 
   return (
@@ -14,10 +14,10 @@ export default function TargetMarket() {
       
       <div className="container mx-auto px-6 relative z-10 text-slate-900">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-display font-bold mb-4">Built for Everyone</h2>
+          <h2 className="text-4xl font-display font-bold mb-4">Dibangun untuk Semua Orang</h2>
           <p className="text-slate-600 max-w-2xl mx-auto">
-            From local student clubs to large-scale institutional summits, 
-            SmartEvent Planner adapts to your unique workflow.
+            Dari klub mahasiswa lokal hingga pertemuan institusi skala besar, 
+            SmartEvent Planner beradaptasi dengan alur kerja unik Anda.
           </p>
         </div>
 

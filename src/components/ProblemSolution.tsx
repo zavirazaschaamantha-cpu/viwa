@@ -3,17 +3,17 @@ import { AlertCircle, CheckCircle2, FileText, Clock, BarChart3, Layers } from 'l
 
 export default function ProblemSolution() {
   const problems = [
-    { icon: <FileText className="text-red-500" />, title: "Manual Data Errors", desc: "Mistakes in participant lists and certificates from manual data entry." },
-    { icon: <Clock className="text-red-500" />, title: "Slow Attendance", desc: "Long queues and bottlenecks during on-site event check-ins." },
-    { icon: <Layers className="text-red-500" />, title: "Non Real-time Data", desc: "Coordinators lack instant insights into registration numbers." },
-    { icon: <BarChart3 className="text-red-500" />, title: "Messy Reporting", desc: "Hours spent compiling reports from scattered spreadsheets." },
+    { icon: <FileText className="text-red-500" />, title: "Kesalahan Data Manual", desc: "Kesalahan pada daftar peserta dan sertifikat akibat entri data manual." },
+    { icon: <Clock className="text-red-500" />, title: "Kehadiran Lambat", desc: "Antrean panjang dan hambatan saat check-in acara di lokasi." },
+    { icon: <Layers className="text-red-500" />, title: "Data Tidak Real-time", desc: "Koordinator kurang mendapatkan wawasan instan tentang jumlah pendaftaran." },
+    { icon: <BarChart3 className="text-red-500" />, title: "Pelaporan Berantakan", desc: "Jam-jam yang dihabiskan untuk menyusun laporan dari spreadsheet yang tersebar." },
   ];
 
   const solutions = [
-    { title: "Online Registration", desc: "Branded, custom forms that capture data accurately from the start." },
-    { title: "QR Ticketing", desc: "Instant digital tickets sent to participants for lightning-fast scan-in." },
-    { title: "Real-time Dashboard", desc: "Monitor registrations and attendance as they happen." },
-    { title: "Easy Reporting", desc: "Download professional event reports with a single click." },
+    { title: "Pendaftaran Online", desc: "Formulir kustom bermerek yang menangkap data secara akurat sejak awal." },
+    { title: "Tiket QR", desc: "Tiket digital instan dikirim ke peserta untuk pemindaian masuk secepat kilat." },
+    { title: "Dasbor Real-time", desc: "Pantau pendaftaran dan kehadiran saat itu juga." },
+    { title: "Pelaporan Mudah", desc: "Unduh laporan acara profesional dengan satu klik." },
   ];
 
   return (
@@ -28,10 +28,10 @@ export default function ProblemSolution() {
             className="flex-1 order-2 lg:order-1"
           >
             <div className="flex items-center gap-2 text-red-500 font-bold mb-4 uppercase tracking-widest text-xs">
-              <AlertCircle size={18} /> The Friction
+              <AlertCircle size={18} /> Hambatan
             </div>
             <h2 className="text-4xl font-display font-bold text-slate-900 mb-8 leading-tight">
-              Manual processes are <span className="text-red-500">bottlenecking</span> your growth.
+              Proses manual <span className="text-red-500">menghambat</span> pertumbuhan Anda.
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {problems.map((p, i) => (
@@ -92,7 +92,7 @@ export default function ProblemSolution() {
                       <div className="w-24 h-24 bg-brand-500/10 rounded-2xl border-2 border-brand-500 flex items-center justify-center">
                          <BarChart3 className="text-brand-600 w-12 h-12" />
                       </div>
-                      <span className="font-bold text-brand-950 tracking-widest text-sm uppercase">Optimized Workflow</span>
+                      <span className="font-bold text-brand-950 tracking-widest text-sm uppercase">Alur Kerja Optimal</span>
                    </div>
                 </div>
               </div>
@@ -105,10 +105,10 @@ export default function ProblemSolution() {
             className="flex-1"
           >
             <div className="flex items-center gap-2 text-brand-600 font-bold mb-4 uppercase tracking-widest text-xs">
-              <CheckCircle2 size={18} /> Digital Efficiency
+              <CheckCircle2 size={18} /> Efisiensi Digital
             </div>
             <h2 className="text-4xl font-display font-bold text-slate-900 mb-8 leading-tight">
-               Built for <span className="text-brand-600">future-proof</span> institutions.
+               Dibangun untuk institusi <span className="text-brand-600">masa depan</span>.
             </h2>
             <div className="space-y-4">
               {solutions.map((s, i) => (

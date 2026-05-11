@@ -3,9 +3,9 @@ import { Calendar as CalendarIcon, MapPin } from 'lucide-react';
 
 export default function EventsPreview() {
   const events = [
-    { title: "National Seminar: Future of AI", date: "Oct 24, 2026", loc: "Main Auditorium", type: "Seminar", img: "https://picsum.photos/seed/seminar/600/400" },
-    { title: "UI/UX Design Workshop", date: "Nov 05, 2026", loc: "Design Lab B", type: "Workshop", img: "https://picsum.photos/seed/workshop/600/400" },
-    { title: "Public Speaking Boot Camp", date: "Dec 12, 2026", loc: "Hall C", type: "Training", img: "https://picsum.photos/seed/training/600/400" },
+    { title: "Seminar Nasional: Masa Depan AI", date: "24 Okt 2026", loc: "Auditorium Utama", type: "Seminar", img: "https://picsum.photos/seed/seminar/600/400" },
+    { title: "Lokakarya Desain UI/UX", date: "05 Nov 2026", loc: "Lab Desain B", type: "Lokakarya", img: "https://picsum.photos/seed/workshop/600/400" },
+    { title: "Boot Camp Public Speaking", date: "12 Des 2026", loc: "Aula C", type: "Pelatihan", img: "https://picsum.photos/seed/training/600/400" },
   ];
 
   return (
@@ -13,14 +13,14 @@ export default function EventsPreview() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-4xl font-display font-bold text-slate-900 mb-4">Sample Events</h2>
+            <h2 className="text-4xl font-display font-bold text-slate-900 mb-4">Contoh Acara</h2>
             <p className="text-slate-600">
-              Check out how events look on our public discovery page. 
-              Clean, informative, and ready to convert visitors into participants.
+              Lihat bagaimana tampilan acara di halaman penemuan publik kami. 
+              Bersih, informatif, dan siap mengubah pengunjung menjadi peserta.
             </p>
           </div>
           <button className="px-8 py-3 bg-brand-700 text-white font-bold rounded-xl hover:bg-brand-800 transition-all shadow-lg shadow-brand-100">
-            See All Public Events
+            Lihat Semua Acara Publik
           </button>
         </div>
 
@@ -56,7 +56,7 @@ export default function EventsPreview() {
                   </div>
                 </div>
                 <button className="w-full py-2 border border-brand-100 bg-brand-50 text-brand-700 font-bold rounded-xl hover:bg-brand-700 hover:text-white transition-colors">
-                  Join Event
+                  Ikuti Acara
                 </button>
               </div>
             </motion.div>

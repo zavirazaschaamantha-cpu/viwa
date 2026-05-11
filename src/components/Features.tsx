@@ -3,22 +3,22 @@ import { UserCheck, Ticket, Search, BarChart, Smartphone, Globe } from 'lucide-r
 
 export default function Features() {
   const features = [
-    { icon: <Globe className="text-brand-600" />, title: "Registration System", desc: "Fully customizable online forms that handle payments and group signups seamlessly." },
-    { icon: <UserCheck className="text-brand-600" />, title: "Participant Management", desc: "Filter, sort and manage your attendee database from a central dashboard." },
-    { icon: <Ticket className="text-brand-600" />, title: "Digital Ticketing", desc: "Automated PDF tickets with secure QR codes sent immediately upon registration." },
-    { icon: <Search className="text-brand-600" />, title: "Attendance Scanner", desc: "Turn any smartphone into a professional check-in device with our mobile scanner app." },
-    { icon: <BarChart className="text-brand-600" />, title: "Dashboard & Reports", desc: "Insightful analytics on attendance rates, marketing performance, and demographics." },
-    { icon: <Smartphone className="text-brand-600" />, title: "Mobile Friendly", desc: "A responsive experience for both event organizers and participants on any device." },
+    { icon: <Globe className="text-brand-600" />, title: "Sistem Pendaftaran", desc: "Formulir online yang sepenuhnya dapat disesuaikan untuk menangani pembayaran dan pendaftaran grup dengan lancar." },
+    { icon: <UserCheck className="text-brand-600" />, title: "Manajemen Peserta", desc: "Filter, urutkan, dan kelola basis data peserta Anda dari dasbor pusat." },
+    { icon: <Ticket className="text-brand-600" />, title: "Tiket Digital", desc: "Tiket PDF otomatis dengan kode QR aman yang dikirim segera setelah pendaftaran." },
+    { icon: <Search className="text-brand-600" />, title: "Pemindai Kehadiran", desc: "Ubah ponsel cerdas apa pun menjadi perangkat check-in profesional dengan aplikasi pemindai seluler kami." },
+    { icon: <BarChart className="text-brand-600" />, title: "Dasbor & Laporan", desc: "Analitik mendalam tentang tingkat kehadiran, kinerja pemasaran, dan demografi." },
+    { icon: <Smartphone className="text-brand-600" />, title: "Ramah Seluler", desc: "Pengalaman responsif bagi penyelenggara acara dan peserta di perangkat apa pun." },
   ];
 
   return (
     <section id="features" className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="text-4xl font-display font-bold text-slate-900 mb-4">Powerful Features</h2>
+          <h2 className="text-4xl font-display font-bold text-slate-900 mb-4">Fitur Unggulan</h2>
           <p className="text-slate-600 max-w-2xl mx-auto">
-            Everything you need to run successful campus events without the stress. 
-            Automate the boring stuff so you can focus on the experience.
+            Semua yang Anda butuhkan untuk menjalankan acara kampus yang sukses tanpa stres. 
+            Otomatiskan hal-hal yang membosankan sehingga Anda dapat fokus pada pengalaman.
           </p>
         </div>
 
@@ -71,8 +71,8 @@ export default function Features() {
               </div>
               
               <div className="absolute bottom-10 left-10 text-slate-900">
-                 <div className="text-3xl font-display font-bold">Real-time Analytics</div>
-                 <p className="text-slate-600">See who's coming, who's checked in, and how your event is growing.</p>
+                 <div className="text-3xl font-display font-bold">Analitika Real-time</div>
+                 <p className="text-slate-600">Lihat siapa yang datang, siapa yang sudah check-in, dan bagaimana acara Anda berkembang.</p>
               </div>
            </motion.div>
         </div>

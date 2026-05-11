@@ -14,10 +14,10 @@ export default function ContactFooter() {
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
            >
-              <h2 className="text-4xl font-display font-bold mb-8 text-brand-950">Get in Touch</h2>
+              <h2 className="text-4xl font-display font-bold mb-8 text-brand-950">Hubungi Kami</h2>
               <p className="text-slate-600 mb-12 max-w-md">
-                Have questions about our plans or need a custom solution for your institution? 
-                Our team is ready to help you plan your next success.
+                Punya pertanyaan tentang paket kami atau butuh solusi khusus untuk institusi Anda? 
+                Tim kami siap membantu Anda merencanakan kesuksesan berikutnya.
               </p>
               
               <div className="space-y-6">
@@ -52,20 +52,20 @@ export default function ContactFooter() {
               <form className="space-y-6">
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                       <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Name</label>
-                       <input type="text" className="w-full bg-white border border-brand-100 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-500 transition-colors text-slate-900" placeholder="John Doe" />
+                       <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Nama</label>
+                       <input type="text" className="w-full bg-white border border-brand-100 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-500 transition-colors text-slate-900" placeholder="Budi Santoso" />
                     </div>
                     <div className="space-y-2">
-                       <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Email</label>
-                       <input type="email" className="w-full bg-white border border-brand-100 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-500 transition-colors text-slate-900" placeholder="john@example.com" />
+                       <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Surel</label>
+                       <input type="email" className="w-full bg-white border border-brand-100 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-500 transition-colors text-slate-900" placeholder="budi@example.com" />
                     </div>
                  </div>
                  <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Message</label>
-                    <textarea className="w-full bg-white border border-brand-100 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-500 transition-colors text-slate-900 h-32" placeholder="How can we help?" />
+                    <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Pesan</label>
+                    <textarea className="w-full bg-white border border-brand-100 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-500 transition-colors text-slate-900 h-32" placeholder="Bagaimana kami bisa membantu?" />
                  </div>
                  <button className="w-full bg-brand-700 text-white font-bold py-4 rounded-xl hover:bg-brand-800 transition-all shadow-lg shadow-brand-100">
-                    Send Message
+                    Kirim Pesan
                  </button>
               </form>
            </motion.div>
@@ -89,7 +89,7 @@ export default function ContactFooter() {
            </div>
 
            <div className="text-slate-500 text-xs text-center md:text-left">
-              &copy; 2026 SmartEvent Planner. All Rights Reserved. Built for Communities.
+              &copy; 2026 SmartEvent Planner. Hak Cipta Dilindungi Undang-Undang. Dibangun untuk Komunitas.
            </div>
         </div>
       </div>

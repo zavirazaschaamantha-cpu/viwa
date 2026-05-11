@@ -23,18 +23,18 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-          <a href="#features" className="hover:text-brand-600 transition-colors">Features</a>
-          <a href="#pricing" className="hover:text-brand-600 transition-colors">Pricing</a>
-          <a href="#about" className="hover:text-brand-600 transition-colors">About</a>
-          <a href="#contact" className="hover:text-brand-600 transition-colors text-accent-500">Contact</a>
+          <a href="#features" className="hover:text-brand-600 transition-colors">Fitur</a>
+          <a href="#pricing" className="hover:text-brand-600 transition-colors">Harga</a>
+          <a href="#about" className="hover:text-brand-600 transition-colors">Tentang</a>
+          <a href="#contact" className="hover:text-brand-600 transition-colors text-accent-500">Kontak</a>
         </div>
 
         <div className="hidden md:flex items-center gap-4">
           <button className="px-5 py-2 text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">
-            Log in
+            Masuk
           </button>
           <button className="px-6 py-2 bg-gradient-to-r from-brand-600 to-accent-500 text-white text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-brand-100 transition-all hover:scale-105 active:scale-95">
-            Get Started
+            Mulai Sekarang
           </button>
         </div>
 
@@ -52,13 +52,13 @@ export default function Navbar() {
           className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-xl border-t border-brand-100 p-6 shadow-2xl"
         >
           <div className="flex flex-col gap-6 text-slate-600 font-medium">
-            <a href="#features" onClick={() => setIsOpen(false)}>Features</a>
-            <a href="#pricing" onClick={() => setIsOpen(false)}>Pricing</a>
-            <a href="#about" onClick={() => setIsOpen(false)}>About</a>
-            <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
+            <a href="#features" onClick={() => setIsOpen(false)}>Fitur</a>
+            <a href="#pricing" onClick={() => setIsOpen(false)}>Harga</a>
+            <a href="#about" onClick={() => setIsOpen(false)}>Tentang</a>
+            <a href="#contact" onClick={() => setIsOpen(false)}>Kontak</a>
             <hr className="border-brand-50" />
-            <button className="text-left py-2 font-semibold text-brand-900">Log in</button>
-            <button className="bg-gradient-to-r from-brand-600 to-accent-500 text-white py-3 rounded-xl font-semibold shadow-lg shadow-brand-100">Get Started</button>
+            <button className="text-left py-2 font-semibold text-brand-900">Masuk</button>
+            <button className="bg-gradient-to-r from-brand-600 to-accent-500 text-white py-3 rounded-xl font-semibold shadow-lg shadow-brand-100">Mulai Sekarang</button>
           </div>
         </motion.div>
       )}

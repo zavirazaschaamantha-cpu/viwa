@@ -4,24 +4,24 @@ import { Check } from 'lucide-react';
 export default function Pricing() {
   const plans = [
     {
-      name: "Free Plan",
+      name: "Paket Gratis",
       price: "Rp0",
-      features: ["Up to 50 participants", "Standard registration form", "Email notifications", "Community support"],
-      cta: "Get Started",
+      features: ["Hingga 50 peserta", "Formulir pendaftaran standar", "Notifikasi email", "Dukungan komunitas"],
+      cta: "Mulai Sekarang",
       highlighted: false
     },
     {
-      name: "Basic Plan",
+      name: "Paket Dasar",
       price: "Rp49.000",
-      features: ["Up to 500 participants", "Custom registration fields", "QR Ticketing system", "Attendance scanner app", "Priority support"],
-      cta: "Go Basic",
+      features: ["Hingga 500 peserta", "Kolom pendaftaran kustom", "Sistem tiket QR", "Aplikasi pemindai kehadiran", "Dukungan prioritas"],
+      cta: "Pilih Dasar",
       highlighted: false
     },
     {
-      name: "Pro Plan",
+      name: "Paket Pro",
       price: "Rp99.000",
-      features: ["Unlimited participants", "Advanced dashboard & analytics", "Unlimited certificates", "Team collaboration tools", "24/7 Premium support", "Custom domain ready"],
-      cta: "Get Pro Now",
+      features: ["Peserta tanpa batas", "Dasbor & analitik tingkat lanjut", "Sertifikat tanpa batas", "Alat kolaborasi tim", "Dukungan Premium 24/7", "Siap domain kustom"],
+      cta: "Ambil Pro Sekarang",
       highlighted: true
     }
   ];
@@ -30,8 +30,8 @@ export default function Pricing() {
     <section id="pricing" className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 text-slate-900">
-           <h2 className="text-4xl font-display font-bold mb-4">Pricing Plans</h2>
-           <p className="text-slate-600">Choose the perfect plan for your community size and event needs.</p>
+           <h2 className="text-4xl font-display font-bold mb-4">Paket Harga</h2>
+           <p className="text-slate-600">Pilih paket yang sempurna untuk ukuran komunitas dan kebutuhan acara Anda.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -47,7 +47,7 @@ export default function Pricing() {
                   <h3 className={`text-xl font-bold mb-2 ${plan.highlighted ? "text-white" : "text-brand-900"}`}>{plan.name}</h3>
                   <div className="flex items-baseline gap-1">
                     <span className="text-4xl font-bold tracking-tight">{plan.price}</span>
-                    <span className={plan.highlighted ? "text-brand-100" : "text-slate-500"}>/month</span>
+                    <span className={plan.highlighted ? "text-brand-100" : "text-slate-500"}>/bulan</span>
                   </div>
                 </div>
 
