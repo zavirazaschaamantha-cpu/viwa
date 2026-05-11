@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Ticket, Users } from 'lucide-react';
+import { ArrowRight, Ticket, Users, Play } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
@@ -19,22 +20,21 @@ export default function Hero() {
               <span className="w-2 h-2 rounded-full bg-accent-400 animate-pulse" />
               Hub Universitas & Komunitas
             </div>
-            <h1 className="text-5xl lg:text-7xl font-display font-bold text-slate-900 leading-[1.1] mb-6">
-              Rencana <span className="text-gradient">Lebih Cerdas</span>, <br />
-              Kelola Acara Lebih Baik
+            <h1 className="text-5xl lg:text-8xl font-display font-bold text-slate-900 leading-[1] mb-8 tracking-tight">
+              Rancang <span className="text-gradient">Masa Depan</span> <br />
+              Event Kampus Anda
             </h1>
-            <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto lg:mx-0">
-              Platform all-in-one untuk mahasiswa dan institusi guna mengoordinasikan, 
-              mempromosikan, dan menganalisis acara kampus tanpa kerumitan manual.
+            <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
+              Platform manajemen event all-in-one yang elegan, intuitif, dan bertenaga untuk mahasiswa serta institusi modern di seluruh Indonesia.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <button className="w-full sm:w-auto px-8 py-4 bg-brand-700 text-white font-bold rounded-xl hover:bg-brand-800 transition-all hover:scale-105 shadow-xl shadow-brand-200 flex items-center justify-center gap-2 group">
+              <Link to="/signup" className="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white font-bold rounded-xl hover:bg-brand-600 transition-all hover:scale-105 shadow-xl shadow-slate-200 flex items-center justify-center gap-2 group">
                 Mulai Gratis <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 font-bold rounded-xl border border-brand-100 hover:bg-brand-50 transition-all flex items-center justify-center gap-2">
-                Lihat Demo
-              </button>
+              </Link>
+              <Link to="/dashboard" className="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 font-bold rounded-xl border border-slate-200 hover:bg-slate-50 transition-all flex items-center justify-center gap-2 group">
+                <Play size={18} className="fill-current" /> Lihat Demo
+              </Link>
             </div>
 
             <div className="mt-12 flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start">
@@ -59,22 +59,24 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex-1 relative"
           >
-            {/* Dashboard Mockup Layered Effect */}
             <div className="relative group">
                <div className="absolute inset-0 bg-brand-200 rounded-[40px] blur-3xl opacity-20 -rotate-3 group-hover:scale-110 transition-transform" />
                <div className="relative rounded-[40px] border border-brand-100 shadow-[0_32px_64px_-16px_rgba(30,41,59,0.15)] bg-white p-2">
-                  <div className="bg-slate-50 rounded-[34px] overflow-hidden border border-slate-100 p-4">
+                  <div className="bg-slate-50 rounded-[34px] overflow-hidden border border-slate-100 p-4 relative group">
                      <div className="flex gap-2 mb-4">
                         <div className="w-3 h-3 rounded-full bg-red-400" />
                         <div className="w-3 h-3 rounded-full bg-amber-400" />
                         <div className="w-3 h-3 rounded-full bg-emerald-400" />
                      </div>
-                     <img 
-                      src="https://picsum.photos/seed/dashboard-preview/1200/800" 
-                      alt="Dashboard Interface" 
-                      className="w-full h-auto rounded-2xl shadow-sm opacity-90 group-hover:scale-[1.02] transition-transform duration-700"
-                      referrerPolicy="no-referrer"
-                    />
+                     <div className="relative">
+                        <img 
+                          src="https://picsum.photos/seed/dashboard-preview/1200/800" 
+                          alt="Dashboard Interface" 
+                          className="w-full h-auto rounded-2xl shadow-sm opacity-90 group-hover:scale-[1.02] transition-transform duration-700"
+                          referrerPolicy="no-referrer"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-tr from-brand-500/10 to-transparent pointer-events-none" />
+                     </div>
                   </div>
                </div>
 

@@ -1,116 +1,75 @@
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Instagram, Twitter, Linkedin, Facebook, Calendar } from 'lucide-react';
+import { Instagram, Twitter, Linkedin, Facebook, Calendar } from 'lucide-react';
 
 export default function ContactFooter() {
+  const currentYear = new Date().getFullYear();
+  
   return (
-    <footer id="contact" className="bg-white text-slate-900 pt-24 pb-12 relative overflow-hidden">
-      <div className="absolute -top-40 -right-40 w-80 h-80 bg-brand-500 rounded-full blur-3xl opacity-5" />
+    <footer id="contact" className="bg-white text-slate-900 pt-32 pb-12 relative overflow-hidden">
+      <div className="glow-purple -top-40 -left-40 w-[600px] h-[600px] opacity-5" />
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-20">
-           {/* Contact Info & Form */}
-           <motion.div
-             initial={{ opacity: 0, y: 30 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-           >
-              <h2 className="text-4xl font-display font-bold mb-8 text-brand-950">Hubungi Kami</h2>
-              <p className="text-slate-600 mb-12 max-w-md">
-                Punya pertanyaan tentang paket kami atau butuh solusi khusus untuk institusi Anda? 
-                Tim kami siap membantu Anda merencanakan kesuksesan berikutnya.
-              </p>
-              
-              <div className="space-y-6">
-                 <div className="flex items-center gap-4 text-slate-600">
-                    <div className="w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center border border-brand-100">
-                       <Mail size={20} className="text-brand-600" />
-                    </div>
-                    <span>hello@smartevent.io</span>
-                 </div>
-                 <div className="flex items-center gap-4 text-slate-600">
-                    <div className="w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center border border-brand-100">
-                       <Phone size={20} className="text-brand-600" />
-                    </div>
-                    <span>+62 812-3456-7890</span>
-                 </div>
-                 <div className="flex items-center gap-4 text-slate-600">
-                    <div className="w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center border border-brand-100">
-                       <MapPin size={20} className="text-brand-600" />
-                    </div>
-                    <span>Innovation Hub, Jakarta</span>
-                 </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mb-32">
+           {/* Branding & Socials */}
+           <div>
+              <div className="flex items-center gap-3 mb-8">
+                <div className="bg-brand-600 p-2 rounded-xl shadow-lg shadow-brand-200">
+                  <Calendar className="text-white w-8 h-8" />
+                </div>
+                <span className="text-3xl font-display font-bold text-slate-900 tracking-tight">SmartEvent<span className="text-accent-500">Planner</span></span>
               </div>
-           </motion.div>
+              <p className="text-slate-600 mb-10 max-w-sm text-lg leading-relaxed font-normal">
+                Mendiung manajemen event kampus Anda ke level berikutnya dengan platform all-in-one yang modern dan elegan.
+              </p>
+              <div className="flex gap-4">
+                 {[Instagram, Twitter, Linkedin, Facebook].map((Icon, i) => (
+                   <a key={i} href="#" className="w-12 h-12 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-slate-400 hover:text-brand-600 hover:border-brand-200 hover:shadow-lg transition-all">
+                     <Icon size={20} />
+                   </a>
+                 ))}
+              </div>
+           </div>
 
            {/* Contact Form */}
            <motion.div
              initial={{ opacity: 0, y: 30 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
-             className="bg-brand-50/50 p-8 rounded-[40px] border border-brand-100"
+             className="premium-card p-12 bg-white relative"
            >
+              <h3 className="text-2xl font-display font-bold mb-8 text-slate-900 tracking-tight">Hubungi Tim Kami</h3>
               <form className="space-y-6">
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                       <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Nama</label>
-                       <input type="text" className="w-full bg-white border border-brand-100 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-500 transition-colors text-slate-900" placeholder="Budi Santoso" />
+                       <label className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Nama Lengkap</label>
+                       <input type="text" className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 focus:outline-none focus:border-brand-500 focus:bg-white transition-all text-slate-900 font-medium" placeholder="Budi Santoso" />
                     </div>
                     <div className="space-y-2">
-                       <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Surel</label>
-                       <input type="email" className="w-full bg-white border border-brand-100 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-500 transition-colors text-slate-900" placeholder="budi@example.com" />
+                       <label className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Alamat Surel</label>
+                       <input type="email" className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 focus:outline-none focus:border-brand-500 focus:bg-white transition-all text-slate-900 font-medium" placeholder="budi@example.com" />
                     </div>
                  </div>
                  <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Pesan</label>
-                    <textarea className="w-full bg-white border border-brand-100 rounded-xl px-4 py-3 focus:outline-none focus:border-brand-500 transition-colors text-slate-900 h-32" placeholder="Bagaimana kami bisa membantu?" />
+                    <label className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Pesan</label>
+                    <textarea className="w-full bg-slate-50/50 border border-slate-100 rounded-2xl px-5 py-4 focus:outline-none focus:border-brand-500 focus:bg-white transition-all text-slate-900 h-32 font-medium" placeholder="Bagaimana kami bisa membantu Anda?" />
                  </div>
-                 <button className="w-full bg-brand-700 text-white font-bold py-4 rounded-xl hover:bg-brand-800 transition-all shadow-lg shadow-brand-100">
-                    Kirim Pesan
+                 <button className="w-full bg-brand-600 text-white font-bold py-5 rounded-2xl hover:bg-brand-700 transition-all shadow-xl shadow-brand-100 hover:-translate-y-1">
+                    Kirim Pesan Sekarang
                  </button>
               </form>
            </motion.div>
         </div>
 
-        {/* Newsletter Section */}
-        <div className="mb-20 p-8 md:p-12 bg-brand-900 rounded-[40px] text-white relative overflow-hidden">
-           <div className="absolute top-0 right-0 w-64 h-64 bg-accent-500 rounded-full blur-[100px] opacity-20" />
-           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
-              <div className="max-w-md text-center lg:text-left">
-                 <h3 className="text-2xl font-display font-bold mb-2">Berlangganan Newsletter Kami</h3>
-                 <p className="text-brand-200">Dapatkan tips eksklusif seputar manajemen event dan berita terbaru dari kami.</p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
-                 <input 
-                  type="email" 
-                  placeholder="Alamat email Anda" 
-                  className="px-6 py-4 rounded-xl bg-white/10 border border-white/20 focus:outline-none focus:border-accent-500 transition-colors w-full sm:w-80"
-                />
-                 <button className="px-8 py-4 bg-accent-500 text-white font-bold rounded-xl hover:bg-accent-600 transition-all shadow-lg shadow-accent-900/20 whitespace-nowrap">
-                    Langganan Sekarang
-                 </button>
-              </div>
-           </div>
-        </div>
-
         {/* Footer Bottom */}
-        <div className="pt-12 border-t border-brand-100 flex flex-col md:flex-row justify-between items-center gap-8">
-           <div className="flex items-center gap-2">
-              <div className="bg-brand-600 p-1 rounded-lg">
-                <Calendar className="text-white w-5 h-5" />
-              </div>
-              <span className="text-lg font-display font-bold text-brand-950">SmartEvent<span className="text-accent-500">Planner</span></span>
+        <div className="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-8">
+           <div className="text-slate-400 text-xs font-medium">
+              &copy; {currentYear} SmartEvent Planner. Hak Cipta Dilindungi. <br /> Built for Communities in Indonesia.
            </div>
-
-           <div className="flex gap-6">
-              {[Instagram, Twitter, Linkedin, Facebook].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full border border-brand-100 flex items-center justify-center text-slate-500 hover:bg-brand-600 hover:text-white hover:border-brand-600 transition-all">
-                  <Icon size={18} />
-                </a>
-              ))}
-           </div>
-
-           <div className="text-slate-500 text-xs text-center md:text-left">
-              &copy; 2026 SmartEvent Planner. Hak Cipta Dilindungi Undang-Undang. Dibangun untuk Komunitas.
+           
+           <div className="flex gap-10 text-xs font-bold uppercase tracking-[0.15em] text-slate-500">
+              <a href="#" className="hover:text-brand-600 transition-colors">Kebijakan Privasi</a>
+              <a href="#" className="hover:text-brand-600 transition-colors">Ketentuan Layanan</a>
+              <a href="#" className="hover:text-brand-600 transition-colors">Bantuan</a>
            </div>
         </div>
       </div>
