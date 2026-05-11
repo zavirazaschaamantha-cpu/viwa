@@ -71,6 +71,27 @@ export default function ContactFooter() {
            </motion.div>
         </div>
 
+        {/* Newsletter Section */}
+        <div className="mb-20 p-8 md:p-12 bg-brand-900 rounded-[40px] text-white relative overflow-hidden">
+           <div className="absolute top-0 right-0 w-64 h-64 bg-accent-500 rounded-full blur-[100px] opacity-20" />
+           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+              <div className="max-w-md text-center lg:text-left">
+                 <h3 className="text-2xl font-display font-bold mb-2">Berlangganan Newsletter Kami</h3>
+                 <p className="text-brand-200">Dapatkan tips eksklusif seputar manajemen event dan berita terbaru dari kami.</p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+                 <input 
+                  type="email" 
+                  placeholder="Alamat email Anda" 
+                  className="px-6 py-4 rounded-xl bg-white/10 border border-white/20 focus:outline-none focus:border-accent-500 transition-colors w-full sm:w-80"
+                />
+                 <button className="px-8 py-4 bg-accent-500 text-white font-bold rounded-xl hover:bg-accent-600 transition-all shadow-lg shadow-accent-900/20 whitespace-nowrap">
+                    Langganan Sekarang
+                 </button>
+              </div>
+           </div>
+        </div>
+
         {/* Footer Bottom */}
         <div className="pt-12 border-t border-brand-100 flex flex-col md:flex-row justify-between items-center gap-8">
            <div className="flex items-center gap-2">

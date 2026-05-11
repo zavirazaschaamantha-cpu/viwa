@@ -2,8 +2,10 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ProblemSolution from './components/ProblemSolution';
 import Features from './components/Features';
+import DashboardDemo from './components/DashboardDemo';
 import EventsPreview from './components/EventsPreview';
 import TargetMarket from './components/TargetMarket';
+import TrustedLogos from './components/TrustedLogos';
 import Pricing from './components/Pricing';
 import SWOT from './components/SWOT';
 import About from './components/About';
@@ -20,8 +22,10 @@ export default function App() {
       <Navbar />
       <main className="relative z-10">
         <Hero />
+        <TrustedLogos />
         <ProblemSolution />
         <Features />
+        <DashboardDemo />
         <EventsPreview />
         <TargetMarket />
         <Pricing />
