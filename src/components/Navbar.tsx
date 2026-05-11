@@ -13,33 +13,33 @@ export default function Navbar() {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-2"
         >
-          <div className="bg-blue-600 p-2 rounded-lg text-white font-bold shadow-lg shadow-blue-900/40">
+          <div className="bg-brand-600 p-2 rounded-lg text-white font-bold shadow-lg shadow-brand-200">
             <Calendar className="w-6 h-6" />
           </div>
-          <span className="text-xl font-display font-bold text-white tracking-tight">
-            SmartEvent<span className="text-blue-400">Planner</span>
+          <span className="text-xl font-display font-bold text-brand-950 tracking-tight">
+            SmartEvent<span className="text-accent-500">Planner</span>
           </span>
         </motion.div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-          <a href="#features" className="hover:text-white transition-colors">Features</a>
-          <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
-          <a href="#about" className="hover:text-white transition-colors">About</a>
-          <a href="#contact" className="hover:text-white transition-colors text-blue-400">Contact</a>
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+          <a href="#features" className="hover:text-brand-600 transition-colors">Features</a>
+          <a href="#pricing" className="hover:text-brand-600 transition-colors">Pricing</a>
+          <a href="#about" className="hover:text-brand-600 transition-colors">About</a>
+          <a href="#contact" className="hover:text-brand-600 transition-colors text-accent-500">Contact</a>
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <button className="px-5 py-2 text-sm font-semibold text-slate-300 hover:text-white transition-colors underline-offset-4 hover:underline">
+          <button className="px-5 py-2 text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">
             Log in
           </button>
-          <button className="px-6 py-2 bg-blue-600 text-white text-sm font-semibold rounded-full hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/50 hover:scale-105 active:scale-95">
+          <button className="px-6 py-2 bg-gradient-to-r from-brand-600 to-accent-500 text-white text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-brand-100 transition-all hover:scale-105 active:scale-95">
             Get Started
           </button>
         </div>
 
         {/* Mobile Menu Toggle */}
-        <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
+        <button className="md:hidden text-brand-900" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X /> : <Menu />}
         </button>
       </div>
@@ -49,16 +49,16 @@ export default function Navbar() {
         <motion.div 
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-xl border-t border-white/10 p-6 shadow-2xl"
+          className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-xl border-t border-brand-100 p-6 shadow-2xl"
         >
-          <div className="flex flex-col gap-6 text-slate-300 font-medium">
+          <div className="flex flex-col gap-6 text-slate-600 font-medium">
             <a href="#features" onClick={() => setIsOpen(false)}>Features</a>
             <a href="#pricing" onClick={() => setIsOpen(false)}>Pricing</a>
             <a href="#about" onClick={() => setIsOpen(false)}>About</a>
             <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
-            <hr className="border-white/5" />
-            <button className="text-left py-2 font-semibold text-white">Log in</button>
-            <button className="bg-blue-600 text-white py-3 rounded-xl font-semibold shadow-lg shadow-blue-900/20">Get Started</button>
+            <hr className="border-brand-50" />
+            <button className="text-left py-2 font-semibold text-brand-900">Log in</button>
+            <button className="bg-gradient-to-r from-brand-600 to-accent-500 text-white py-3 rounded-xl font-semibold shadow-lg shadow-brand-100">Get Started</button>
           </div>
         </motion.div>
       )}

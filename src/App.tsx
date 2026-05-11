@@ -11,11 +11,11 @@ import ContactFooter from './components/ContactFooter';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-950 relative overflow-hidden font-sans">
+    <div className="min-h-screen bg-white relative overflow-hidden font-sans">
       {/* Dynamic Background Glows */}
-      <div className="glow-blue -top-24 -left-24 w-96 h-96" />
-      <div className="glow-indigo top-1/2 -right-24 w-80 h-80" />
-      <div className="glow-cyan -bottom-24 left-1/3 w-96 h-96" />
+      <div className="glow-purple -top-24 -left-24 w-96 h-96" />
+      <div className="glow-pink top-1/2 -right-24 w-80 h-80" />
+      <div className="glow-purple -bottom-24 left-1/3 w-96 h-96" />
       
       <Navbar />
       <main className="relative z-10">
