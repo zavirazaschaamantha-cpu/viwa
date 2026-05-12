@@ -1,26 +1,27 @@
 import { motion } from 'motion/react';
-import { Calendar as CalendarIcon, MapPin } from 'lucide-react';
+import { Calendar as CalendarIcon, MapPin, ArrowRight } from 'lucide-react';
 
 export default function EventsPreview() {
   const events = [
-    { title: "Seminar Nasional: Masa Depan AI", date: "24 Okt 2026", loc: "Auditorium Utama", type: "Seminar", img: "https://picsum.photos/seed/seminar/600/400" },
-    { title: "Lokakarya Desain UI/UX", date: "05 Nov 2026", loc: "Lab Desain B", type: "Lokakarya", img: "https://picsum.photos/seed/workshop/600/400" },
-    { title: "Boot Camp Public Speaking", date: "12 Des 2026", loc: "Aula C", type: "Pelatihan", img: "https://picsum.photos/seed/training/600/400" },
+    { title: "Seminar Nasional: Masa Depan Teknologi", date: "24 OKT 2026", loc: "Gedung Serbaguna Kampus", type: "Seminar", img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop" },
+    { title: "Workshop Desain UI/UX Tingkat Lanjut", date: "05 NOV 2026", loc: "Laboratorium Komputer V", type: "Workshop", img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop" },
+    { title: "Bootcamp Kepemimpinan Organisasi", date: "12 DES 2026", loc: "Aula Utama Universitas", type: "Training", img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop" },
   ];
 
   return (
-    <section className="py-24 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+    <section className="section-padding bg-slate-50 relative overflow-hidden">
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
-            <h2 className="text-4xl font-display font-bold text-slate-900 mb-4">Contoh Acara</h2>
-            <p className="text-slate-600">
-              Lihat bagaimana tampilan acara di halaman penemuan publik kami. 
-              Bersih, informatif, dan siap mengubah pengunjung menjadi peserta.
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-6 tracking-tight">
+              Inspirasi Acara <span className="text-brand-600">Terbaru Kami</span>
+            </h2>
+            <p className="text-slate-600 text-lg font-medium leading-relaxed">
+              Jelajahi berbagai acara menarik yang sedang berlangsung dan yang akan datang. Daftarkan diri Anda sekarang.
             </p>
           </div>
-          <button className="px-8 py-3 bg-brand-700 text-white font-bold rounded-xl hover:bg-brand-800 transition-all shadow-lg shadow-brand-100">
-            Lihat Semua Acara Publik
+          <button className="px-8 py-3 bg-white text-slate-900 border border-slate-200 font-bold rounded-xl hover:bg-brand-50 hover:text-brand-600 transition-all shadow-sm">
+            Lihat Semua Acara
           </button>
         </div>
 
@@ -28,35 +29,35 @@ export default function EventsPreview() {
           {events.map((event, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="glass-card rounded-[32px] overflow-hidden group hover:border-brand-300 transition-all"
+              className="bg-white rounded-3xl overflow-hidden group hover:shadow-2xl hover:shadow-brand-100 transition-all duration-500 border border-slate-100"
             >
               <div className="relative h-56 overflow-hidden">
                 <img 
                   src={event.img} 
                   alt={event.title} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 grayscale hover:grayscale-0"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brand-700 border border-brand-100">
-                  {event.type}
+                <div className="absolute top-4 left-4 bg-brand-600 text-white px-4 py-1 rounded-lg text-xs font-bold uppercase tracking-wider">
+                   {event.type}
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">{event.title}</h3>
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-center gap-2 text-slate-500 text-sm">
-                    <CalendarIcon size={16} /> {event.date}
+              <div className="p-8">
+                <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight group-hover:text-brand-600 transition-colors">{event.title}</h3>
+                <div className="space-y-3 mb-8">
+                  <div className="flex items-center gap-3 text-slate-500 text-sm font-semibold">
+                    <CalendarIcon size={16} className="text-brand-600" /> {event.date}
                   </div>
-                  <div className="flex items-center gap-2 text-slate-500 text-sm">
-                    <MapPin size={16} /> {event.loc}
+                  <div className="flex items-center gap-3 text-slate-500 text-sm font-semibold">
+                    <MapPin size={16} className="text-brand-600" /> {event.loc}
                   </div>
                 </div>
-                <button className="w-full py-2 border border-brand-100 bg-brand-50 text-brand-700 font-bold rounded-xl hover:bg-brand-700 hover:text-white transition-colors">
-                  Ikuti Acara
+                <button className="w-full py-4 bg-slate-900 text-white text-sm font-bold rounded-xl hover:bg-brand-600 transition-all flex items-center justify-center gap-2">
+                  Daftar Sekarang <ArrowRight size={16} />
                 </button>
               </div>
             </motion.div>

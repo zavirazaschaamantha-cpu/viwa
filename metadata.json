@@ -1,6 +1,6 @@
 {
-  "name": "SmartEvent Premium",
-  "description": "Platform SaaS manajemen event elit dalam Bahasa Indonesia dengan estetika modern perpaduan ungu, pink, peach, dan sunkist orange. Fitur meliputi tiket QR, analitik futuristik, dan UX premium.",
+  "name": "SmartEvent Planner",
+  "description": "Platform manajemen acara kampus modern untuk mahasiswa dan organisasi. Fitur lengkap meliputi pendaftaran online, tiket QR, dashboard analitik real-time, dan manajemen tim kepanitiaan.",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }
